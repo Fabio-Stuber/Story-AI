@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="CSS/w3.css" />
+		<link rel="stylesheet" href="CSS/style.css" />
+		<link rel="stylesheet" href="CSS/print.css" media="print" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+		<link rel="shortcut icon" href="/DATA/bookmark.png" type="image/x-icon" />
+
+		<!-- JS -->
+		<script src="JAVASCRIPT/script.js"></script>
+
+		<title>AI STORY</title>
+	</head>
+	<body>
+		<!-- Navbar (top) -->
+		<div class="no-print w3-top">
+			<div
+				class="no-print w3-bar w3-white w3-card w3-padding"
+				style="letter-spacing: 4px">
+				<a href="index.html#home" class="no-print w3-bar-item w3-button"
+					><span class="no-print w3-text-green">AI</span> STORY
+				</a>
+				<!-- Right-sided navbar links. Hide them on small screens -->
+				<div class="no-print w3-right w3-hide-small">
+					<a
+						href="index.html#INSTUCTIONS"
+						class="no-print w3-bar-item w3-button"
+						>INSTUCTIONS
+					</a>
+					<a href="index.html#ABOUT" class="no-print w3-bar-item w3-button"
+						>ABOUT
+					</a>
+					<a href="Datapolicy.html" class="no-print w3-bar-item w3-button"
+						>DATA POLICY
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- Header -->
+		<div class="no-print w3-padding-top-64" id="home"><!-- SPACE --></div>
+		<div class="no-print w3-padding-top-64"><!-- SPACE --></div>
+		<header
+			class="no-print w3-container w3-animate-top"
+			style="max-width: 1000px; margin: auto">
+			<!-- Input-->
+			<h1 class="no-print" style="letter-spacing: 4px">
+				<span class="no-print w3-text-green">AI</span> STORY
+			</h1>
+			<h2 class="no-print" style="letter-spacing: 4px">
+				<span class="no-print w3-text-green">CREATE.</span> PRINT. ENJOY.
+			</h2>
+		</header>
+
+		<div class="no-print w3-padding-top-64"><!-- SPACE --></div>
+
+		<div class="no-print w3-padding-top-64"><!-- SPACE --></div>
+
+		<div class="no-print w3-container" style="max-width: 1000px; margin: auto">
+			<form action="">
+				<div class="no-print w3-row">
+					<!-- Input (TEXT) -->
+					<div class="no-print w3-third w3-container w3-padding">
+						<label for="form-title">STORY TITLE</label><br />
+						<input
+							name="title"
+							id="form-title"
+							placeholder="YOU ARE NICE"
+							class="no-print w3-block w3-small w3-input"
+							onfocusout="document.getElementById('fake-form-title').value =
+						document.getElementById('form-title').value" />
+					</div>
+
+					<!-- Input (1. AUSWAHL) -->
+					<div class="no-print w3-third w3-container w3-padding">
+						<label for="form-genre">GENRE</label><br />
+						<select
+							name="genre"
+							id="form-genre"
+							class="no-print w3-block w3-small w3-input"
+							type="text"
+							value="HORROR"
+							onfocusout="document.getElementById('fake-form-genre').value =
+						document.getElementById('form-genre').value">
+							<option value="HORROR">HORROR</option>
+							<option value="KRIMI">KRIMI</option>
+							<option value="FANTASY">FANTASY</option>
+							<option value="ROMAN">ROMAN</option>
+							<option value="SCIECE FICTION">SCIECE FICTION</option>
+						</select>
+					</div>
+					<!-- Input (2. AUSWAHL) -->
+					<div class="no-print w3-third w3-container w3-padding">
+						<label for="form-times">LENGTH</label><br />
+						<select
+							name="times"
+							id="form-times"
+							class="no-print w3-block w3-small w3-input"
+							value="2 MIN"
+							onfocusout="document.getElementById('fake-form-times').value =
+						document.getElementById('form-times').value">
+							<option value="2">2 MIN</option>
+							<option value="5">5 MIN</option>
+							<option value="10">10 MIN</option>
+							<option value="15">15 MIN</option>
+							<option value="20">20 MIN</option>
+							<option value="25">25 MIN</option>
+							<option value="30">30 MIN</option>
+						</select>
+					</div>
+					<!-- Input (2. AUSWAHL) -->
+					<div class="no-print w3-third w3-container w3-padding">
+						<label for="form-language">LANGUAGE</label><br />
+						<select
+							name="times"
+							id="form-language"
+							class="no-print w3-block w3-small w3-input"
+							value="GERMAN"
+							onfocusout="document.getElementById('fake-form-language').value =
+						document.getElementById('form-language').value">
+							<option value="German">GERMAN</option>
+							<option value="Englisch">ENGLISCH</option>
+						</select>
+					</div>
+					<br />
+					<!-- Input (BUTTON) -->
+					<div>
+						<input
+							name="Generate"
+							id="form-button"
+							class="no-print w3-block w3-small w3-btn w3-green w3-padding"
+							type="button"
+							value="Generate"
+							onclick="run()" />
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div class="no-print w3-padding-top-64"><!-- SPACE --></div>
+
+		<!-- Output -->
+		<div
+			id="Output"
+			class="w3-container"
+			style="max-width: 1000px; margin: auto">
+			<img id="Output-Image" src="/DATA/Load.gif" />
+			<h2 id="Output-Title" class=""></h2>
+			<p id="Output-Text"></p>
+
+			<p class="print w3-center">
+				<span class="w3-text-green">AI</span> STORY ||
+				<span class="w3-text-green">CREATE.</span> PRINT. ENJOY. ||
+				<span class="w3-text-green">BY</span> FABIO STUBER & JAKUB SPIONEK
+			</p>
+
+			<!-- PRINT BUTTON -->
+
+			<a
+				onclick="window.print()"
+				class="no-print w3-button w3-block w3-small w3-btn w3-green w3-padding">
+				PRINT / MAKE PDF
+				<i class="no-print fa fa-print" aria-hidden="true"></i>
+			</a>
+		</div>
+
+		<div class="no-print w3-padding-top-64" id="INSTUCTIONS">
+			<!-- SPACE -->
+		</div>
+		<!-- Instuctions -->
+		<div class="no-print w3-green">
+			<div class="no-print w3-padding-top-32"><!-- SPACE --></div>
+
+			<div
+				class="no-print w3-section w3-row"
+				style="max-width: 1000px; margin: auto">
+				<div class="no-print w3-container w3-green">
+					<h2 class="no-print">HOW IT WORKS</h2>
+					<h3 class="no-print">IN JUST THREE STEPS TO YOUR PERFECT STORY</h3>
+				</div>
+				<div class="no-print w3-half w3-container w3-green">
+					<h2 class="no-print">STEP 1</h2>
+					<p>
+						On the screen, you'll find three input windows. Starting from the
+						left, the first window prompts you to enter a title for your story.
+						Once you've entered a title, you can proceed to step 2.
+					</p>
+				</div>
+				<div class="no-print w3-half w3-container">
+					<div class="no-print w3-padding-top-64"><!-- SPACE --></div>
+
+					<label for="fake-form-title">STORY TITLE</label><br />
+					<input
+						name="title"
+						id="fake-form-title"
+						placeholder="YOU ARE NICE"
+						class="no-print w3-block w3-small w3-input"
+						onfocusout="document.getElementById('form-title').value =
+					document.getElementById('fake-form-title').value" />
+				</div>
+			</div>
+			<div
+				class="no-print w3-section w3-row"
+				style="border-radius: 16px; max-width: 1000px; margin: auto">
+				<div class="no-print w3-half w3-container w3-green">
+					<h2 class="no-print">STEP 2</h2>
+					<p>
+						In the second input window, you select a genre for your story, such
+						as horror, comedy, fantasy, and so on. Once you've made your
+						selection, you can proceed to step 3.
+					</p>
+				</div>
+				<div class="no-print w3-half w3-container">
+					<div class="no-print w3-padding-top-64"><!-- SPACE --></div>
+
+					<label for="fake-form-genre">GENRE</label><br />
+					<select
+						name="genre"
+						id="fake-form-genre"
+						class="no-print w3-block w3-small w3-input"
+						type="text"
+						value="HORROR"
+						onfocusout="document.getElementById('form-genre').value =
+						document.getElementById('fake-form-genre').value">
+						<option value="HORROR">HORROR</option>
+						<option value="KRIMI">KRIMI</option>
+						<option value="FANTASY">FANTASY</option>
+						<option value="ROMAN">ROMAN</option>
+						<option value="SCIECE FICTION">SCIECE FICTION</option>
+					</select>
+				</div>
+			</div>
+			<div
+				class="no-print w3-section w3-row"
+				style="border-radius: 16px; max-width: 1000px; margin: auto">
+				<div class="no-print w3-half w3-container">
+					<h2 class="no-print">STEP 3</h2>
+					<p>
+						In the third window, you define the reading length of your text.
+						This is limited to a maximum of 30 minutes.
+					</p>
+				</div>
+				<div class="no-print w3-half w3-container">
+					<div class="no-print w3-padding-top-64"><!-- SPACE --></div>
+
+					<label for="fake-form-times">LENGTH</label><br />
+					<select
+						name="times"
+						id="fake-form-times"
+						class="no-print w3-block w3-small w3-input"
+						value="2 MIN"
+						onfocusout="document.getElementById('form-times').value =
+						document.getElementById('fake-form-times').value">
+						<option value="2">2 MIN</option>
+						<option value="5">5 MIN</option>
+						<option value="10">10 MIN</option>
+						<option value="15">15 MIN</option>
+						<option value="20">20 MIN</option>
+						<option value="25">25 MIN</option>
+						<option value="30">30 MIN</option>
+					</select>
+				</div>
+			</div>
+			<div
+				class="no-print w3-section w3-row"
+				style="border-radius: 16px; max-width: 1000px; margin: auto">
+				<div class="no-print w3-half w3-container">
+					<h2 class="no-print">STEP 4</h2>
+					<p>
+						In the last input window, press the "Generate" button and your story
+						will come to life.
+					</p>
+				</div>
+				<div class="no-print w3-half w3-container">
+					<div class="no-print w3-padding-top-64"><!-- SPACE --></div>
+
+					<input
+						name="Generate"
+						id="form-button"
+						class="no-print w3-block w3-small w3-btn w3-white w3-padding"
+						type="button"
+						value="Generate"
+						onclick="run()" />
+				</div>
+			</div>
+			<div class="no-print w3-padding-top-32"><!-- SPACE --></div>
+		</div>
+
+		<div class="no-print w3-padding-top-64" id="ABOUT"><!-- SPACE --></div>
+
+		<!-- ABOUT -->
+		<div>
+			<div
+				class="no-print w3-section w3-row"
+				style="max-width: 1000px; margin: auto">
+				<div class="no-print w3-container">
+					<h2 class="no-print">ABOUT US</h2>
+					<h3 class="no-print">TWO STUDENTS WITH A GREAT FUTURE</h3>
+				</div>
+				<div class="no-print w3-half w3-container">
+					<img
+						id="About-Image-1"
+						src="/DATA/Fabio.jpeg"
+						class="w3-center no-print"
+						style="aspect-ratio: 1 / 1; width: 100%" />
+					<h2 class="no-print">Fabio Stuber</h2>
+					<p>
+						Fabio is a coding prodigy and master of organizing new tools to
+						successfully complete any project. He is always thrilled when
+						watching the movie "Matrix", but he also has a soft spot for cats.
+					</p>
+				</div>
+				<div class="no-print w3-half w3-container">
+					<img
+						id="About-Image-2"
+						src="/DATA/Jakub.jpg"
+						class="w3-center no-print"
+						style="aspect-ratio: 1 / 1; width: 100%" />
+					<h2 class="no-print">JAKUB SPIONEK</h2>
+					<p>
+						Jakub is a creative genius. Amidst millions of ideas, he always
+						manages to find the one that fits perfectly. He never gives up until
+						the perfect result is achieved. Born under the sign of Taurus, he's
+						as stubborn as a bull (and just as likely to charge ahead when he's
+						got a goal in sight!).
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="no-print w3-padding-top-64"><!-- SPACE --></div>
+		<footer class="w3-container no-print w3-padding-32 w3-green">
+			<div
+				class="no-print w3-section w3-row"
+				style="border-radius: 16px; max-width: 1000px; margin: auto">
+				<div class="no-print w3-half w3-container">
+					<p>
+						&copy; 2024 Fabio Stuber / Jakub Spionek <br />
+						Contact us: +77 508 27 55 <br />
+						This is a School Project
+					</p>
+				</div>
+				<div class="no-print w3-half w3-container">
+					<div class="no-print w3-right">
+						<a href="#home" class="no-print w3-bar-item w3-button"
+							>Go to top
+							<i class="no-print fa fa-chevron-up" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

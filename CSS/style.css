@@ -1,0 +1,16 @@
+#Output-Image {
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 300px;
+   background-size: 100%;
+   object-fit: cover;
+}
+
+.print {
+   display: none;
+}
+
+#Output-Title {
+   text-transform: uppercase;
+
+}

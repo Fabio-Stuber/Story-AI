@@ -1,0 +1,36 @@
+@media print {
+
+    * {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .print {
+        display: block !important;
+    }
+
+    #Output-Image {
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 1 / 4;
+    }
+
+    .no-print {
+        display: none;
+    }
+
+    .w3-text-green {
+        color: #4CAF50 !important
+    }
+
+    #Output-Title {
+        text-transform: uppercase;
+
+    }
+
+    @page {
+        size: 21cm 29cm;
+        margin: 1cm !important;
+    }
+}
