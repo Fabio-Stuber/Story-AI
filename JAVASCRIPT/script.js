@@ -10,8 +10,8 @@ let Language = "";
 /* Autorisiert CHAT-GPT & DALL-E */
 const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Authorization", "Bearer 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");
-myHeaders.append("Cookie", "__cf_bm=6XvTkKWPhnHmaobyzlWmQl9gWwggPEnA.nwa1YC_riI-1713784654-1.0.1.1-FT_lPfYobFCUmOU6vqoMSKvzHpUeALp7BKvBHe6ihDqXJ265oF2mlK5w6MgAcALnT6S_zOFVHt2odsksZqkUEg; _cfuvid=crX4jI7TQ1u4ZwGFDkk5kNWgvfxPIZaTaH1.lRC0mFk-1713779348071-0.0.1.1-604800000");
+myHeaders.append("Authorization", GITHUB_AUTHORIZATION);
+myHeaders.append("Cookie", GITHUB_COOKIE);
 
 /* RUN */
 /* Abfragen von Variabeln */
