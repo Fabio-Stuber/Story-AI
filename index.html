@@ -94,11 +94,11 @@
 							value="HORROR"
 							onfocusout="document.getElementById('fake-form-genre').value =
 						document.getElementById('form-genre').value">
-							<option value="HORROR">HORROR</option>
-							<option value="KRIMI">KRIMI</option>
-							<option value="FANTASY">FANTASY</option>
-							<option value="ROMAN">ROMAN</option>
-							<option value="SCIECE FICTION">SCIECE FICTION</option>
+							<option value="Horror">HORROR</option>
+							<option value="Krimi">KRIMI</option>
+							<option value="Fantasy">FANTASY</option>
+							<option value="Roman">ROMAN</option>
+							<option value="Sciece Fiction">SCIECE FICTION</option>
 						</select>
 					</div>
 					<!-- Input (2. AUSWAHL) -->
@@ -111,16 +111,17 @@
 							value="2 MIN"
 							onfocusout="document.getElementById('fake-form-times').value =
 						document.getElementById('form-times').value">
-							<option value="2">2 MIN</option>
-							<option value="5">5 MIN</option>
-							<option value="10">10 MIN</option>
-							<option value="15">15 MIN</option>
-							<option value="20">20 MIN</option>
-							<option value="25">25 MIN</option>
-							<option value="30">30 MIN</option>
+						<option value="ReadTime: 2 Min">2 MIN</option>
+						<option value="ReadTime: 5 Min">5 MIN</option>
+						<option value="ReadTime: 10 Min">10 MIN</option>
+						<option value="ReadTime: 15 Min">15 MIN</option>
+						<option value="ReadTime: 20 Min">20 MIN</option>
+						<option value="ReadTime: 25 Min">25 MIN</option>
+						<option value="ReadTime: 30 Min">30 MIN</option>
 						</select>
 					</div>
-					<!-- Input (2. AUSWAHL) -->
+				</div>
+				<div class="no-print w3-row">
 					<div class="no-print w3-third w3-container w3-padding">
 						<label for="form-language">LANGUAGE</label><br />
 						<select
@@ -132,6 +133,35 @@
 						document.getElementById('form-language').value">
 							<option value="German">GERMAN</option>
 							<option value="Englisch">ENGLISCH</option>
+						</select>
+					</div>
+
+					<div class="no-print w3-third w3-container w3-padding">
+						<label for="form-style">Style</label><br />
+						<select
+							name="times"
+							id="form-style"
+							class="no-print w3-block w3-small w3-input"
+							value="Comic"
+							onfocusout="document.getElementById('fake-form-style').value =
+						document.getElementById('form-style').value">
+							<option value="Comic">COMIC</option>
+							<option value="Real">REAL</option>
+						</select>
+					</div>
+					<div class="no-print w3-third w3-container w3-padding">
+						<label for="form-happiness">happiness</label><br />
+						<select
+							name="times"
+							id="form-happiness"
+							class="no-print w3-block w3-small w3-input"
+							value="GERMAN"
+							onfocusout="document.getElementById('fake-form-happiness').value =
+						document.getElementById('form-happiness').value">
+							<option value="Happy">HAPPY</option>
+							<option value="Normal">NORMAL</option>
+							<option value="Angry">ANGRY</option>
+							<option value="very Angry">VERY ANGRY</option>
 						</select>
 					</div>
 					<br />
@@ -199,8 +229,6 @@
 					</p>
 				</div>
 				<div class="no-print w3-half w3-container">
-					<div class="no-print w3-padding-top-64"><!-- SPACE --></div>
-
 					<label for="fake-form-title">STORY TITLE</label><br />
 					<input
 						name="title"
@@ -223,8 +251,6 @@
 					</p>
 				</div>
 				<div class="no-print w3-half w3-container">
-					<div class="no-print w3-padding-top-64"><!-- SPACE --></div>
-
 					<label for="fake-form-genre">GENRE</label><br />
 					<select
 						name="genre"
@@ -253,8 +279,6 @@
 					</p>
 				</div>
 				<div class="no-print w3-half w3-container">
-					<div class="no-print w3-padding-top-64"><!-- SPACE --></div>
-
 					<label for="fake-form-times">LENGTH</label><br />
 					<select
 						name="times"
@@ -263,13 +287,13 @@
 						value="2 MIN"
 						onfocusout="document.getElementById('form-times').value =
 						document.getElementById('fake-form-times').value">
-						<option value="2">2 MIN</option>
-						<option value="5">5 MIN</option>
-						<option value="10">10 MIN</option>
-						<option value="15">15 MIN</option>
-						<option value="20">20 MIN</option>
-						<option value="25">25 MIN</option>
-						<option value="30">30 MIN</option>
+						<option value="ReadTime: 2 Min">2 MIN</option>
+						<option value="ReadTime: 5 Min">5 MIN</option>
+						<option value="ReadTime: 10 Min">10 MIN</option>
+						<option value="ReadTime: 15 Min">15 MIN</option>
+						<option value="ReadTime: 20 Min">20 MIN</option>
+						<option value="ReadTime: 25 Min">25 MIN</option>
+						<option value="ReadTime: 30 Min">30 MIN</option>
 					</select>
 				</div>
 			</div>
@@ -284,8 +308,6 @@
 					</p>
 				</div>
 				<div class="no-print w3-half w3-container">
-					<div class="no-print w3-padding-top-64"><!-- SPACE --></div>
-
 					<input
 						name="Generate"
 						id="form-button"
@@ -293,6 +315,53 @@
 						type="button"
 						value="Generate"
 						onclick="run()" />
+				</div>
+			</div>
+			<div
+				class="no-print w3-section w3-row"
+				style="border-radius: 16px; max-width: 1000px; margin: auto">
+				<div class="no-print w3-half w3-container">
+					<h2 class="no-print">STEP 5</h2>
+					<p>Here are some additional settings</p>
+				</div>
+				<div class="no-print w3-half w3-container">
+					<label for="fake-form-language">LANGUAGE</label><br />
+					<select
+						name="times"
+						id="fake-form-language"
+						class="no-print w3-block w3-small w3-input"
+						value="GERMAN"
+						onfocusout="document.getElementById('form-language').value =
+					document.getElementById('fake-form-language').value">
+						<option value="German">GERMAN</option>
+						<option value="Englisch">ENGLISCH</option>
+					</select>
+
+					<label for="fake-form-style">Style</label><br />
+					<select
+						name="times"
+						id="fake-form-style"
+						class="no-print w3-block w3-small w3-input"
+						value="Comic"
+						onfocusout="document.getElementById('form-style').value =
+					document.getElementById('fake-form-style').value">
+						<option value="Comic">COMIC</option>
+						<option value="Real">REAL</option>
+						<option value="Story">STORY</option>
+					</select>
+					<label for="fake-form-happiness">happiness</label><br />
+					<select
+						name="times"
+						id="fake-form-happiness"
+						class="no-print w3-block w3-small w3-input"
+						value="GERMAN"
+						onfocusout="document.getElementById('form-happiness').value =
+					document.getElementById('fake-form-happiness').value">
+						<option value="Happy">HAPPY</option>
+						<option value="Normal">NORMAL</option>
+						<option value="Angry">ANGRY</option>
+						<option value="very Angry">VERY ANGRY</option>
+					</select>
 				</div>
 			</div>
 			<div class="no-print w3-padding-top-32"><!-- SPACE --></div>
