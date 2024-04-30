@@ -11,8 +11,8 @@ let happiness = "";
 /* AUTHORIZATION */
 /* Autorisiert CHAT-GPT & DALL-E */
 const myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Authorization", "Bearer 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");
+myHeaders.append("Authorization", GITHUB_AUTHORIZATION);
+myHeaders.append("Cookie", GITHUB_COOKIE);
 
 /* RUN */
 /* Ausführung von Generieren */
