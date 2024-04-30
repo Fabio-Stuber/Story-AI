@@ -4,17 +4,18 @@ let Title = "";
 let Genre = "";
 let Time = "";
 let Language = "";
+let Style = "";
+let happiness = "";
 
 
 /* AUTHORIZATION */
 /* Autorisiert CHAT-GPT & DALL-E */
 const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Authorization", GITHUB_AUTHORIZATION);
-myHeaders.append("Cookie", GITHUB_COOKIE);
+myHeaders.append("Authorization", "Bearer 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");
 
 /* RUN */
-/* Abfragen von Variabeln */
+/* Ausführung von Generieren */
 function run() {
     document.getElementById("Output-Image").src = "../DATA/Load.gif";
     document.getElementById("Output-Text").innerHTML = "Load Story...";
@@ -22,7 +23,14 @@ function run() {
     Genre = document.getElementById("form-genre").value;
     Time = document.getElementById("form-times").value;
     Language = document.getElementById("form-language").value;
+    Style = document.getElementById("form-style").value;
+    happiness = document.getElementById("form-happiness").value;
 
+    console.log("");
+    console.log("GENERATION");
+    console.log("TEXT: " + "Generate a story without a title and without a chapter in " + Language + "; " + Title + "; " + Genre + "; " + happiness + "; " + Time) + ";";
+    console.log("IMAGE: " + "Generate a " + Style + " Image; " + Title + "; " + Genre + "; " + happiness + ";");
+    console.log("");
 
     text();
     images();
@@ -37,13 +45,12 @@ function run() {
 /* Generiert die Geschichte */
 function text() {
 
-
     const raw = JSON.stringify({
         "model": "gpt-4-turbo",
         "messages": [
             {
                 "role": "user",
-                "content": "Generate a story without a title and without a chapter in " + Language + "; " + Title + "; " + Genre + "; " + Time
+                "content": "Generate a story without a title and without a chapter in " + Language + "; " + Title + "; " + Genre + "; " + happiness + "; " + Time + ";"
             }
         ],
         "temperature": 1
@@ -67,11 +74,11 @@ function text() {
 
 /* DALL-E */
 /* Generiert die Bilder zur Geschichte */
-
 function images() {
+
     const raw = JSON.stringify({
         "model": "dall-e-3",
-        "prompt": "Generate a Story Image;" + Title + "; " + Genre,
+        "prompt": "Generate a " + Style + " Image; " + Title + "; " + Genre + "; " + happiness + "; ",
         "n": 1,
         "size": "1792x1024"
     });
