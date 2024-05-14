@@ -17,7 +17,7 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-		<link rel="shortcut icon" href="/DATA/bookmark.png" type="image/x-icon" />
+		<link rel="shortcut icon" href="DATA/29302.png" type="image/x-icon" />
 
 		<!-- JS -->
 		<script src="JAVASCRIPT/script.js"></script>
@@ -38,13 +38,13 @@
 					<a
 						href="index.html#INSTUCTIONS"
 						class="no-print w3-bar-item w3-button"
-						>INSTUCTIONS
+						>INSTRUCTIONS
+					</a>
+					<a href="index.html#HOWWORKS" class="no-print w3-bar-item w3-button"
+						>HOW IT WORKS
 					</a>
 					<a href="index.html#ABOUT" class="no-print w3-bar-item w3-button"
 						>ABOUT
-					</a>
-					<a href="Datapolicy.html" class="no-print w3-bar-item w3-button"
-						>DATA POLICY
 					</a>
 				</div>
 			</div>
@@ -77,7 +77,7 @@
 						<input
 							name="title"
 							id="form-title"
-							placeholder="YOU ARE NICE"
+							placeholder="WRITE A TITLE"
 							class="no-print w3-block w3-small w3-input"
 							onfocusout="document.getElementById('fake-form-title').value =
 						document.getElementById('form-title').value" />
@@ -91,11 +91,11 @@
 							id="form-genre"
 							class="no-print w3-block w3-small w3-input"
 							type="text"
-							value="HORROR"
+							value="Horror"
 							onfocusout="document.getElementById('fake-form-genre').value =
 						document.getElementById('form-genre').value">
 							<option value="Horror">HORROR</option>
-							<option value="Krimi">KRIMI</option>
+							<option value="CRIME">CRIME</option>
 							<option value="Fantasy">FANTASY</option>
 							<option value="Roman">ROMAN</option>
 							<option value="Sciece Fiction">SCIECE FICTION</option>
@@ -137,7 +137,7 @@
 					</div>
 
 					<div class="no-print w3-third w3-container w3-padding">
-						<label for="form-style">Style</label><br />
+						<label for="form-style">STYLE</label><br />
 						<select
 							name="times"
 							id="form-style"
@@ -151,14 +151,14 @@
 						</select>
 					</div>
 					<div class="no-print w3-third w3-container w3-padding">
-						<label for="form-happiness">happiness</label><br />
+						<label for="form-emotions">EMOTIONS</label><br />
 						<select
 							name="times"
-							id="form-happiness"
+							id="form-emotions"
 							class="no-print w3-block w3-small w3-input"
 							value="GERMAN"
-							onfocusout="document.getElementById('fake-form-happiness').value =
-						document.getElementById('form-happiness').value">
+							onfocusout="document.getElementById('fake-form-emotions').value =
+						document.getElementById('form-emotions').value">
 							<option value="Happy">HAPPY</option>
 							<option value="Normal">NORMAL</option>
 							<option value="Angry">ANGRY</option>
@@ -187,9 +187,26 @@
 			id="Output"
 			class="w3-container"
 			style="max-width: 1000px; margin: auto">
-			<img id="Output-Image" src="DATA/Load.gif" />
+			<img id="Output-Image" src="" />
+			<div id="loader" class="lds-facebook">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<a
+				href=""
+				target="_blank"
+				id="Image_Button"
+				class="no-print w3-button w3-block w3-small w3-btn w3-green w3-padding">
+				SHOW FULL IMAGE
+			</a>
 			<h2 id="Output-Title" class=""></h2>
 			<p id="Output-Text"></p>
+			<div id="loader2" class="lds-facebook">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
 
 			<p class="print w3-center">
 				<span class="w3-text-green">AI</span> STORY ||
@@ -200,26 +217,29 @@
 			<!-- PRINT BUTTON -->
 
 			<a
-				onclick="window.print()"
+				id="Print_Button"
+				onclick="print()"
 				class="no-print w3-button w3-block w3-small w3-btn w3-green w3-padding">
 				PRINT / MAKE PDF
 				<i class="no-print fa fa-print" aria-hidden="true"></i>
 			</a>
 		</div>
 
-		<div class="no-print w3-padding-top-64" id="INSTUCTIONS">
+		<div class="no-print w3-padding-top-64">
 			<!-- SPACE -->
 		</div>
 		<!-- Instuctions -->
-		<div class="no-print w3-green">
-			<div class="no-print w3-padding-top-32"><!-- SPACE --></div>
+		<div class="no-print w3-green" id="INSTUCTIONS">
+			<div class="no-print w3-padding-top-32">
+				<!-- SPACE -->
+			</div>
 
 			<div
 				class="no-print w3-section w3-row"
 				style="max-width: 1000px; margin: auto">
 				<div class="no-print w3-container w3-green">
-					<h2 class="no-print">HOW IT WORKS</h2>
-					<h3 class="no-print">IN JUST THREE STEPS TO YOUR PERFECT STORY</h3>
+					<h2 class="no-print">INSTRUCTIONS, STEP BY STEP</h2>
+					<h3 class="no-print">IN JUST FIVE STEPS TO YOUR PERFECT STORY</h3>
 				</div>
 				<div class="no-print w3-half w3-container w3-green">
 					<h2 class="no-print">STEP 1</h2>
@@ -234,7 +254,7 @@
 					<input
 						name="title"
 						id="fake-form-title"
-						placeholder="YOU ARE NICE"
+						placeholder="WRITE A TITLE"
 						class="no-print w3-block w3-small w3-input"
 						onfocusout="document.getElementById('form-title').value =
 					document.getElementById('fake-form-title').value" />
@@ -258,14 +278,14 @@
 						id="fake-form-genre"
 						class="no-print w3-block w3-small w3-input"
 						type="text"
-						value="HORROR"
+						value="Horror"
 						onfocusout="document.getElementById('form-genre').value =
 						document.getElementById('fake-form-genre').value">
-						<option value="HORROR">HORROR</option>
-						<option value="KRIMI">KRIMI</option>
-						<option value="FANTASY">FANTASY</option>
-						<option value="ROMAN">ROMAN</option>
-						<option value="SCIECE FICTION">SCIECE FICTION</option>
+						<option value="Horror">HORROR</option>
+						<option value="CRIME">CRIME</option>
+						<option value="Fantasy">FANTASY</option>
+						<option value="Roman">ROMAN</option>
+						<option value="Sciece Fiction">SCIECE FICTION</option>
 					</select>
 				</div>
 			</div>
@@ -338,7 +358,7 @@
 						<option value="Englisch">ENGLISCH</option>
 					</select>
 
-					<label for="fake-form-style">Style</label><br />
+					<label for="fake-form-style">STYLE</label><br />
 					<select
 						name="times"
 						id="fake-form-style"
@@ -350,14 +370,14 @@
 						<option value="Real">REAL</option>
 						<option value="Story">STORY</option>
 					</select>
-					<label for="fake-form-happiness">happiness</label><br />
+					<label for="fake-form-emotions">EMOTIONS</label><br />
 					<select
 						name="times"
-						id="fake-form-happiness"
+						id="fake-form-emotions"
 						class="no-print w3-block w3-small w3-input"
 						value="GERMAN"
-						onfocusout="document.getElementById('form-happiness').value =
-					document.getElementById('fake-form-happiness').value">
+						onfocusout="document.getElementById('form-emotions').value =
+					document.getElementById('fake-form-emotions').value">
 						<option value="Happy">HAPPY</option>
 						<option value="Normal">NORMAL</option>
 						<option value="Angry">ANGRY</option>
@@ -368,13 +388,44 @@
 			<div class="no-print w3-padding-top-32"><!-- SPACE --></div>
 		</div>
 
-		<div class="no-print w3-padding-top-64" id="ABOUT"><!-- SPACE --></div>
-
-		<!-- ABOUT -->
+		<!-- HOW IT WORKS -->
 		<div>
 			<div
 				class="no-print w3-section w3-row"
 				style="max-width: 1000px; margin: auto">
+				<div class="no-print w3-padding-top-64" id="HOWWORKS">
+					<!-- SPACE -->
+				</div>
+
+				<div class="no-print w3-container">
+					<h2 class="no-print">HOW IT WORKS</h2>
+					<h3 class="no-print">WE USED THIS AI</h3>
+				</div>
+				<div class="no-print w3-half w3-container">
+					<h2 class="no-print">OPENAI CHAT-GPT 4</h2>
+					<p>
+						ChatGPT is a sibling model to InstructGPT, which is trained to
+						follow an instruction in a prompt and provide a detailed response.
+					</p>
+				</div>
+				<div class="no-print w3-half w3-container">
+					<h2 class="no-print">OPENAI DALL-E 3</h2>
+					<p>
+						DALL·E 3 is an AI system that can create realistic images and art
+						from a description in natural language.
+					</p>
+					<div class="no-print w3-padding-32"><!-- SPACE --></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ABOUT -->
+		<div class="w3-green">
+			<div
+				class="no-print w3-section w3-row w3-green"
+				style="max-width: 1000px; margin: auto">
+				<div class="no-print w3-padding-top-64" id="ABOUT"><!-- SPACE --></div>
+
 				<div class="no-print w3-container">
 					<h2 class="no-print">ABOUT US</h2>
 					<h3 class="no-print">TWO STUDENTS WITH A GREAT FUTURE</h3>
@@ -385,7 +436,7 @@
 						src="DATA/Fabio.jpeg"
 						class="w3-center no-print"
 						style="aspect-ratio: 1 / 1; width: 100%" />
-					<h2 class="no-print">Fabio Stuber</h2>
+					<h2 class="no-print">FABIO STUBER</h2>
 					<p>
 						Fabio is a coding prodigy and master of organizing new tools to
 						successfully complete any project. He is always thrilled when
@@ -406,11 +457,12 @@
 						as stubborn as a bull (and just as likely to charge ahead when he's
 						got a goal in sight!).
 					</p>
+					<div class="no-print w3-padding-32"><!-- SPACE --></div>
 				</div>
 			</div>
 		</div>
-		<div class="no-print w3-padding-top-64"><!-- SPACE --></div>
-		<footer class="w3-container no-print w3-padding-32 w3-green">
+
+		<footer class="w3-container no-print w3-padding-32">
 			<div
 				class="no-print w3-section w3-row"
 				style="border-radius: 16px; max-width: 1000px; margin: auto">
@@ -424,8 +476,12 @@
 				<div class="no-print w3-half w3-container">
 					<div class="no-print w3-right">
 						<a href="#home" class="no-print w3-bar-item w3-button"
-							>Go to top
+							>GO TO TOP
 							<i class="no-print fa fa-chevron-up" aria-hidden="true"></i>
+						</a>
+						<br />
+						<a href="Datapolicy.html" class="no-print w3-bar-item w3-button"
+							>DATA POLICY
 						</a>
 					</div>
 				</div>

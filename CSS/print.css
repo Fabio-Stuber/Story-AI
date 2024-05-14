@@ -29,6 +29,14 @@
 
     }
 
+    #Image_Button {
+        display: none !important;
+    }
+
+    #Print_Button {
+        display: none !important;
+    }
+
     @page {
         size: 21cm 29cm;
         margin: 1cm !important;
