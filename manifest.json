@@ -17,21 +17,24 @@
 			"type": "image/webp",
 			"form_factor": "wide",
 			"label": "LOGO"
+		},
+		{
+			"src": "icons/512x512.png",
+			"sizes": "512x512",
+			"type": "image/webp",
+			"form_factor": "wide",
+			"label": "LOGO"
 		}
 	],
 	"shortcuts": [
 		{
-			"name": "Today's agenda",
-			"url": "/today",
-			"description": "List of events planned for today"
-		},
-		{
-			"name": "New event",
-			"url": "/create/event"
-		},
-		{
-			"name": "New reminder",
-			"url": "/create/reminder"
+			"name": "Datapolicy",
+			"short_name": "Datapolicy",
+			"url": "/Datapolicy",
+			"description": "Datapolicy",
+			"icons": [
+				{ "src": "icons/512x512.png", "sizes": "512x512", "type": "image/png" }
+			]
 		}
 	],
 	"icons": [
