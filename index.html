@@ -22,12 +22,28 @@
 		<!-- JS -->
 		<script src="JAVASCRIPT/script.js"></script>
 
+		<link rel="manifest" href="manifest.json">
+		<script>
+			if ('serviceWorker' in navigator) {
+				window.addEventListener("load", () => {
+					navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+						console.log('ServiceWorker registered');
+					  }).catch(function(err) {
+						console.log('ServiceWorker error: ', err);
+					  });
+				})
+			}
+		</script>    
+
+
+		<link rel="manifest" href="manifest.json" />
+		<meta name="author" content="Fabio Stuber" />
+
 		<title>AI STORY</title>
 		<meta property="og:image" content="DATA/29302.png" />
 		<meta property="og:title" content="AI STORY" />
-		<meta property="og:url" content="https://fabio-stuber.github.io/Story-AI/" />
-		<meta name="description" content="CREATE. PRINT. ENJOY.">
-		<meta name="author" content="Fabio Stuber">
+		<meta property="og:url" content="https://story-ai.pages.dev/" />
+		<meta name="description" content="CREATE. PRINT. ENJOY." />
 	</head>
 	<body>
 		<!-- Navbar (top) -->
