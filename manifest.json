@@ -3,11 +3,37 @@
 	"short_name": "AI STORY",
 	"description": "CREATE. PRINT. ENJOY.",
 	"theme_color": "#ffffff",
-	"background_color": "#4caf50",
+	"background_color": "#ffffff",
 	"display": "standalone",
+	"display_override": "fullscreen",
 	"orientation": "portrait",
 	"scope": "/",
 	"start_url": "/",
+	"protocol_handlers": [{}],
+	"screenshots": [
+		{
+			"src": "icons/512x512.png",
+			"sizes": "512x512",
+			"type": "image/webp",
+			"form_factor": "wide",
+			"label": "LOGO"
+		}
+	],
+	"shortcuts": [
+		{
+			"name": "Today's agenda",
+			"url": "/today",
+			"description": "List of events planned for today"
+		},
+		{
+			"name": "New event",
+			"url": "/create/event"
+		},
+		{
+			"name": "New reminder",
+			"url": "/create/reminder"
+		}
+	],
 	"icons": [
 		{ "src": "icons/16x16.png", "sizes": "16x16", "type": "image/png" },
 		{ "src": "icons/32x32.png", "sizes": "32x32", "type": "image/png" },
